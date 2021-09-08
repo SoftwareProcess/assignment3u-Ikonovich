@@ -14,17 +14,51 @@ class CollapseTest(TestCase):
     
     
     #  Sample happy path test -- replace with your own
-    def test100_010ShouldCalculateNominalInput(self):
-        value = '9'
-        expectedResult = '9'
+    def testSingleDigitInput(self):
+        value = '7'
+        expectedResult = '4'
         actualResult = c.collapse(value)
         self.assertEqual(expectedResult, actualResult)
         
-    #  Sample sad path test -- replace with your own
-    def test100_910ShouldDetectBadInput(self):
+    def testMultiDigitInput(self):
+        value = '7359247210'
+        expectedResult = '4'
+        actualResult = c.collapse(value)
+        self.assertEqual(expectedResult, actualResult)
+        
+    #  Sad path test -- Non-numeric input
+    def testNonNumericInput(self):
         value = 'a'
         expectedResult = None
         actualResult = c.collapse(value)
         self.assertEqual(expectedResult, actualResult)
+        
+    #Sad path test -- Negative input value
+    def testNegativeInput(self):
+        value = '-1'
+        expectedResult = None
+        actualResult = c.collapse(value)
+        self.assertEqual(expectedResult, actualResult)   
     
+    #Sad path test -- input over 50 digits
+    def testFiftyOneDigitInput(self):
+        value = '354122460412069184449688835653388948582633418359859'
+        expectedResult = None
+        actualResult = c.collapse(value)
+        self.assertEqual(expectedResult, actualResult)
+    
+    #  Sad path test -- missing input
+    def testMissingInput(self):
+        value = None
+        expectedResult = None
+        actualResult = c.collapse()
+        self.assertEqual(expectedResult, actualResult)
+        
+            #  Sad path test -- Input is 'None'
+    def testNoneInput(self):
+        value = None
+        expectedResult = None
+        actualResult = c.collapse(value)
+        self.assertEqual(expectedResult, actualResult)
+        
     
