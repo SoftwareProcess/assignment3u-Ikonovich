@@ -11,19 +11,11 @@ def collapse(value = None):
             for i in range(len(storedValue)):
                 
                 tempValue += int(storedValue[i])
-                storedValue = str(tempValue)
+            
+            storedValue = str(tempValue)
             
         return storedValue
     
     else: 
         return None
             
-        
-        
-
-
-
-
-
-
-# Inward facing methods
