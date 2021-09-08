@@ -8,7 +8,7 @@ def collapse(value = None):
         while len(storedValue) > 1:
             tempValue = 0;
             
-            for i in range(len(storedValue) - 1):
+            for i in range(len(storedValue)):
                 
                 tempValue += int(storedValue[i])
                 storedValue = str(tempValue)
