@@ -16,7 +16,7 @@ class CollapseTest(TestCase):
     #  Sample happy path test -- replace with your own
     def testSingleDigitInput(self):
         value = '7'
-        expectedResult = '4'
+        expectedResult = '7'
         actualResult = c.collapse(value)
         self.assertEqual(expectedResult, actualResult)
         
