@@ -5,12 +5,12 @@ def collapse(value = None):
     
         storedValue = value;
         
-        while (len(valueRef) > 1):
+        while len(storedValue) > 1:
             tempValue = 0;
             
-            for (i = 0; i++; i < len(valueRef)):
+            for i in range(len(storedValue)):
                 
-                tempString += valueRef.index(i)
+                tempValue += storedValue.index(i)
                 storedValue = str(tempValue)
             
         return storedValue
