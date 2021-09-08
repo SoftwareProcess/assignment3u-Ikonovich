@@ -13,13 +13,14 @@ class CollapseTest(TestCase):
     #         side effects:  none
     
     
-    #  Sample happy path test -- replace with your own
+    #  Happy path test -- one digit
     def testSingleDigitInput(self):
         value = '7'
         expectedResult = '7'
         actualResult = c.collapse(value)
         self.assertEqual(expectedResult, actualResult)
         
+    # Happy path test -- multiple digits, two iterations necessary
     def testMultiDigitInput(self):
         value = '7359247210'
         expectedResult = '4'
