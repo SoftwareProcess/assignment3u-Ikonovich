@@ -10,7 +10,7 @@ def collapse(value = None):
             
             for i in range(len(storedValue)):
                 
-                tempValue += storedValue.index(i)
+                tempValue += int(storedValue.index(i))
                 storedValue = str(tempValue)
             
         return storedValue
