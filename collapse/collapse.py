@@ -1,7 +1,7 @@
 # Outward facing method(s)
 def collapse(value = None):
     
-    if (isinstance(value,str) and (value.isnumeric()) and (len(value) < 51)):
+    if (isinstance(value,str) and (len(value) < 51) and (value.isnumeric()) ):
         
         storedValue = value
         
