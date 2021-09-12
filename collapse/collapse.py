@@ -7,4 +7,4 @@ def collapse(value = None):
                 
             tempValue += int(storedValue[i])
             
-        storedValue = str(tempValue)
+        return str(tempValue)
